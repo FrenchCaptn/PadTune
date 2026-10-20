@@ -33,7 +33,7 @@ from i18n import tr
 from flexi_ble import ALL_BLOCKS, BLOCK_CLASSES, BleLink, FakeLink, LinkError
 
 APP_NAME = "PadTune"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 FROZEN = getattr(sys, "frozen", False)                 # True dans PadTune.exe (PyInstaller)
 APP_DIR = Path(__file__).resolve().parent
 ICON_FILE = APP_DIR / "assets" / ("padtune.ico" if sys.platform == "win32" else "padtune_256.png")
@@ -1074,7 +1074,8 @@ class MainWindow(QMainWindow):
         v.addLayout(bar)
         self.status = QLabel(tr("Non connecté"))
         v.addWidget(self.status)
-        hint = QLabel(tr("Mets la manette en mode Bluetooth (comme pour KeyLinker), puis Rechercher. "
+        hint = QLabel(tr("Allume simplement la manette, quel que soit son mode (dongle, Bluetooth…) : pas besoin de l'associer au PC. "
+                         "Il faut juste que le Bluetooth du PC soit activé et KeyLinker fermé. "
                          "L'appareil marqué ★ expose le service de configuration."))
         hint.setWordWrap(True)
         hint.setStyleSheet("color: palette(mid);")
@@ -1403,13 +1404,13 @@ class MainWindow(QMainWindow):
                 self.status.setText(tr("Favori détecté : connexion à {name}…", name=fav.name or fav.address))
                 return self.toggle_connect(auto=True)
             if self.favorites and not self._manual_off:
-                self.status.setText(tr("En attente de la manette favorite… (allume-la en mode Bluetooth)"))
+                self.status.setText(tr("En attente de la manette favorite… (allume-la)"))
                 return self._schedule_rescan()
             if n:
                 self.status.setText(tr("{n} manette(s) compatible(s) trouvée(s) : clique sur Connecter", n=n))
             else:
                 self.status.setText(tr("{n} appareil(s) trouvé(s), aucun marqué ★ : vérifie que la manette "
-                                       "est en mode Bluetooth, puis Rechercher", n=len(res)))
+                                       "est allumée et que KeyLinker est fermé, puis Rechercher", n=len(res)))
         self.runner.run(cls.scan(), done)
 
     def toggle_connect(self, auto=False):

@@ -46,7 +46,7 @@ The `.bat` scripts show their messages in French when Windows is in French, and 
 ## Usage
 
 1. **Close KeyLinker** (and turn off Bluetooth on your phone): the controller only accepts one configuration connection at a time.
-2. Put the Flexi in **Bluetooth mode**, as you would to pair it with KeyLinker.
+2. **Turn the controller on**, in whatever mode you normally use (dongle, Bluetooth…). No need to switch modes or pair it with Windows: PadTune finds it on its own, as long as Bluetooth is turned on on the PC.
 3. The search starts by itself when the app opens (click **Search** to run it again). Pick the device marked ★, then **Connect**.
 4. The app reads the current settings and makes an **automatic backup** in `%APPDATA%\PadTune\`.
 5. Change the settings, then click **Apply to controller**. The app reads the controller back to check that the values were saved.
@@ -126,7 +126,7 @@ So it should work with **other KeyLinker-compatible controllers**, meaning those
 
 ## Troubleshooting
 
-- **The controller doesn't show up:** check that it's in Bluetooth mode and that Bluetooth is on on the PC. If it's already paired with Windows as a controller, you may need to remove it in Settings → Bluetooth.
+- **The controller doesn't show up:** check that it's on, that Bluetooth is on on the PC, and that KeyLinker is closed on your phone. If it's already paired with Windows as a controller, you may need to remove it in Settings → Bluetooth.
 - **It shows up without ★:** connect anyway. The service isn't always advertised before connecting.
 - **"No response" from the controller:** disconnect, turn the controller off and on again, and retry.
 - The log at the bottom of the window shows the frames exchanged. Copy it if you ask for help.

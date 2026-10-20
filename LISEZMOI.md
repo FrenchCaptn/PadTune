@@ -48,7 +48,7 @@ Si tu utilisais la version précédente (Flexi Config), tes sauvegardes et ton f
 ## Utilisation
 
 1. **Ferme KeyLinker** (et coupe le Bluetooth du téléphone) : la manette n'accepte qu'une connexion de configuration à la fois.
-2. Mets la Flexi en **mode Bluetooth**, comme pour l'associer à KeyLinker.
+2. **Allume la manette**, dans le mode que tu utilises d'habitude (dongle, Bluetooth…). Pas besoin de changer de mode ni de l'associer à Windows : PadTune la trouve tout seul, du moment que le Bluetooth du PC est activé.
 3. La recherche se lance toute seule à l'ouverture de l'appli (bouton **Rechercher** pour la relancer). Choisis l'appareil marqué ★, puis **Connecter**.
 4. L'appli lit les réglages actuels et en fait une **sauvegarde automatique** dans `%APPDATA%\PadTune\`.
 5. Modifie les réglages, puis clique sur **Appliquer à la manette**. L'appli relit la manette pour vérifier que les valeurs ont bien été enregistrées.
@@ -128,7 +128,7 @@ Il devrait donc fonctionner avec **les autres manettes compatibles KeyLinker**, 
 
 ## Si ça ne marche pas
 
-- **La manette n'apparaît pas :** vérifie qu'elle est en mode Bluetooth et que le Bluetooth du PC est activé. Si elle est déjà associée à Windows comme manette, il peut falloir la retirer de Paramètres → Bluetooth.
+- **La manette n'apparaît pas :** vérifie qu'elle est allumée, que le Bluetooth du PC est activé et que KeyLinker est fermé sur le téléphone. Si elle est déjà associée à Windows comme manette, il peut falloir la retirer de Paramètres → Bluetooth.
 - **Elle apparaît sans ★ :** connecte-toi quand même. Le service n'est pas toujours annoncé avant la connexion.
 - **« Pas de réponse de la manette » :** déconnecte, éteins puis rallume la manette, et réessaie.
 - Le journal en bas de la fenêtre affiche les trames échangées. Copie-le si tu demandes de l'aide.
