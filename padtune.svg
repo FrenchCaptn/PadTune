@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <radialGradient id="zone" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#60a5fa" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+  <!-- fond -->
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#bg)"/>
+  <!-- zone utile du stick -->
+  <circle cx="128" cy="128" r="74" fill="url(#zone)"/>
+  <!-- croix de centrage -->
+  <g stroke="#cbd5e1" stroke-opacity="0.55" stroke-width="3" stroke-dasharray="7 7" stroke-linecap="round">
+    <line x1="128" y1="46" x2="128" y2="210"/>
+    <line x1="46" y1="128" x2="210" y2="128"/>
+  </g>
+  <!-- zone morte -->
+  <circle cx="128" cy="128" r="14" fill="#ef4444" fill-opacity="0.55"/>
+  <!-- bord de course -->
+  <circle cx="128" cy="128" r="82" fill="none" stroke="#e5e7eb" stroke-width="9"/>
+  <!-- arc de réglage -->
+  <path d="M 128 46 A 82 82 0 0 1 199.0 87.0" fill="none" stroke="#f59e0b" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="199.0" cy="87.0" r="9" fill="#f59e0b"/>
+  <!-- position brute (blanc) et sortie (rouge) -->
+  <circle cx="160" cy="96" r="16" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+  <circle cx="171" cy="85" r="9" fill="#ef4444"/>
+</svg>
